@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khadidja Safa Ali Belhadj — AI Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bubbles"></canvas>
+
+    <header>
+      <h1>Khadidja Safa Ali Belhadj</h1>
+      <p id="typing"></p>
+      <div class="links">
+        <a href="https://github.com/safablh" target="_blank">GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/safa-ali-belhadj-a47212305/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="mailto:alibelhadjsafa@gmail.com">Email</a>
+      </div>
+    </header>
+
+    <section id="about" class="reveal">
+      <h2>About</h2>
+      <p>
+        A motivated Artificial Intelligence Engineer, passionate and dynamic,
+        with strong adaptability and a positive mindset.
+      </p>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <button class="lightbox-btn prev" onclick="changeLightboxSlide(-1)">
+        ‹
+      </button>
+      <img id="lightbox-img" src="" alt="" />
+      <button class="lightbox-btn next" onclick="changeLightboxSlide(1)">
+        ›
+      </button>
+    </div>
+
+    <section id="projects" class="reveal">
+      <h2>Projects</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="llm">LLM</button>
+        <button class="filter-btn" data-filter="webapp">Web App</button>
+        <button class="filter-btn" data-filter="figma">Figma</button>
+      </div>
+
+      <div class="project-grid">
+        <div class="project project-horizontal" data-category="llm">
+          <div class="project-text">
+            <h3>
+              Intelligent exploitation of knowledge graphs in the era of
+              generative models
+            </h3>
+            <h4>Master's Final Project</h4>
+
+            <p>
+              <strong>Problem:</strong> Dependence on human experts for Directed
+              Acyclic Graph (DAG) optimization in SemPart, an RDF data
+              partitioning framework.
+            </p>
+            <p>
+              <strong>Approach:</strong> Fine-tuning an open-source LLM
+              (Llama3.2-3B) on a specific dataset, combined with an AI agent to
+              automate DAG optimization.
+            </p>
+            <p>
+              <strong>Results:</strong> A fine-tuned LLM capable of generating
+              optimized DAGs from input DAGs, reducing the need for manual
+              intervention.
+            </p>
+            <p>
+              <strong>Stack:</strong> Python, PyTorch, LoRA / QLoRA, Hugging
+              Face, Unsloth, React.
+            </p>
+
+            <a
+              href="documents/PFE_Master_Khadidja_Safa_Ali_Belhadj.pdf"
+              target="_blank"
+              >View PDF →</a
+            >
+
+            <a href="videos/llm-demo.mp4" target="_blank">Watch Demo →</a>
+          </div>
+
+          <div class="slider slider-round">
+            <div class="slides">
+              <img
+                src="images/llm-slide1.png"
+                class="slide active"
+                alt="Slide 1"
+                onclick="openLightbox(this)"
+              />
+              <img
+                src="images/llm-slide2.png"
+                class="slide"
+                alt="Slide 2"
+                onclick="openLightbox(this)"
+              />
+              <img
+                src="images/llm-slide3.png"
+                class="slide"
+                alt="Slide 3"
+                onclick="openLightbox(this)"
+              />
+            </div>
+            <button class="slide-btn prev" onclick="changeSlide(this, -1)">
+              ‹
+            </button>
+            <button class="slide-btn next" onclick="changeSlide(this, 1)">
+              ›
+            </button>
+            <div class="dots"></div>
+          </div>
+        </div>
+
+        <div class="project project-horizontal" data-category="webapp">
+          <div class="project-text">
+            <h3>EcoGreen</h3>
+            <p>
+              Mobile application prototype for waste recycling, built for a
+              client project as demo.
+            </p>
+            <p><strong>Stack:</strong> React, Tailwind CSS.</p>
+            <a
+              href="https://safablh.github.io/ecogreen_prototype_app/"
+              target="_blank"
+              >View Live →</a
+            >
+          </div>
+          <img
+            src="images/ecogreen.png"
+            class="project-image"
+            alt="EcoGreen preview"
+          />
+        </div>
+
+        <div class="project project-horizontal" data-category="webapp figma">
+          <div class="project-text">
+            <h3>DrGuide</h3>
+            <h4>Bachlor's Degree Project</h4>
+            <p>
+              Created a doctor appointment booking platform, from UI design in
+              Figma to full-stack web development.
+            </p>
+            <p>
+              <strong>MERN Stack:</strong> MongoDB, Express, React, Node.js.
+            </p>
+            <a
+              href="https://www.figma.com/design/bX7iLzY0po8K8glSI2R4Tv/DrGuide-platform--prototype-?node-id=0-1&p=f"
+              target="_blank"
+              >View Design →</a
+            >
+          </div>
+          <img
+            src="images/drguide.png"
+            class="project-image"
+            alt="DrGuide preview"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <p>&copy; 2026 | Safa Ali Belhadj</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
